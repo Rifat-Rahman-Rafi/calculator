@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+<body>
+
+  <div class="row">
+
+ 
+  <div class="cal-12">
+    
+  <h1>calculator</h1>
+
+ 
+
+  <div class="card">
+ 
+    <div class="input-head">
+     
+      <input type="text" id="result">
+
+    </div>
+
+    <div class="cla-body">
+
+      <div>
+          <button id="number" class="btn" onclick="dis('7')">7</button>
+          <button class="btn" onclick="dis('8')">8</button>
+          <button class="btn" onclick="dis('9')">9</button>
+          <button class="btn" onclick="dis('/')">/</button>
+         
+          <br>
+          <button class="btn" onclick="dis('6')">6</button>
+          <button class="btn" onclick="dis('5')">5</button>
+          <button class="btn" onclick="dis('4')">4</button>
+          <button class="btn" onclick="dis('*')">*</button>
+          <br>
+          <button class="btn" onclick="dis('3')">3</button>
+          <button class="btn" onclick="dis('2')">2</button>
+          <button class="btn" onclick="dis('1')">1</button>
+          <button class="btn" onclick="dis('-')">-</button>
+          <br>
+          <button class="btn" id="clear-btn" onclick="clr()">AC</button>
+          <button class="btn" onclick="dis('0')">0</button>
+          <button class="btn" onclick="solve()">=</button>
+          <button class="btn" onclick="dis('+')">+</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+    <script>
+         
+         function dis(val)
+       {
+       document.getElementById("result").value+=val
+       }
+
+
+       function solve()
+         {
+           let x = document.getElementById("result").value
+           let y = eval(x)
+           document.getElementById("result").value = y
+          }
+          function clr()
+          {
+            document.getElementById("result").value = ""
+           }
+
+    </script>
+
+
+  
+</body>
+</html>
